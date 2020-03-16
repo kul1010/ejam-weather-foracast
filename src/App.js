@@ -6,9 +6,6 @@ import PageContainer from './components/PageContainer';
 import Footer from './components/Footer';
 
 
-
-
-
 /* 
  * mapStateToProps
 */
@@ -26,7 +23,6 @@ class App extends Component {
    * @summary handles button click 
    */
   
-
   render() {
     return (
       <div className="App">
@@ -38,4 +34,4 @@ class App extends Component {
   }
 }
 
-export default connect(mapStateToProps)(App);
+export default connect(mapStateToProps,null)(App);

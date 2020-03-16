@@ -1,11 +1,30 @@
 /* 
   src/reducers/cityReducer.js
 */
-export default (state = {}, action) => {
+
+const iState={
+  id:'',
+  isOk:false,
+  errors:null,
+  weatherApiData:{}
+}
+export default (state = iState, action) => {
   switch (action.type) {
-    case 'CITY_ACTION':
+    case 'SET_CITY':
       return {
-        result: action.payload
+        ...state,
+        id: action.payload
+      }
+    case 'GET_CITY':
+      return { 
+        ...state,
+        id: state.id
+      }
+    case 'FETCH_API_DATA':
+      return { 
+        ...state,
+        weatherApiData:action.payload
+        
       }
     default:
       return state
