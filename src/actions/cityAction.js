@@ -1,13 +1,15 @@
 import OAuth from 'oauth';
+import {keys} from '../config/keys'
 
+// console.log('oooo',yahooAppId,yahooConsumerKey,yahooConsumerSecret)
 const api_header = {
-  "X-Yahoo-App-Id": "0FCEXQ4a0FCEXQ4a"
+  "X-Yahoo-App-Id": keys.yahooAppId
 };
 const api_request = new OAuth.OAuth(
   null,
   null,
-  'dj0yJmk9TlJBSWt3WU9seUlqJmQ9WVdrOU1FWkRSVmhSTkdFbWNHbzlNQS0tJnM9Y29uc3VtZXJzZWNyZXQmc3Y9MCZ4PTY0',
-  '03565e99b7c8ceb2cb1af041e18f61b3653dfc6a',
+  keys.yahooConsumerKey,
+  keys.yahooConsumerSecret,
   '1.0',
   null,
   'HMAC-SHA1',
@@ -37,8 +39,7 @@ export const fetchApiDataAction = (cityId) => async dispatch => {
         type: 'FETCH_API_DATA',
         payload:{apiData:jsonData,isOk:true,errors:null}        
       
-    })}
-  else{
+    })}else{
     // console.log('error',err);
     dispatch({
       type: 'FETCH_API_DATA',

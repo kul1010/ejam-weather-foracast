@@ -31,7 +31,7 @@ class PageContainer extends Component{
   render(){
     let apiDetails=null;
     if(this.props.isOk){
-      console.log('rrrrrrr',this.props.apiData)
+      // console.log('rrrrrrr',this.props.apiData)
       let apiData = this.props.apiData;
       let errors = this.props.errors;
       // apiData.map(data=>{
@@ -49,14 +49,17 @@ class PageContainer extends Component{
                    <p><b>Wind:</b> chill:{current_observation.wind.chill}, direction:{current_observation.wind.direction}, speed:{current_observation.wind.speed}</p>
                    <p><b>Atmosphere:</b> humidity:{current_observation.atmosphere.humidity}, visibility:{current_observation.atmosphere.visibility}, pressure:{current_observation.atmosphere.pressure}</p>
                    <p><b>Astronomy:</b> sunrise:{current_observation.astronomy.sunrise}, sunset:{current_observation.astronomy.sunset}</p>
-                   <p><b>condition:</b> {current_observation.condition.text}, temperature:{current_observation.condition.temperature}</p>
-                   
+                   <p><b>condition:</b> {current_observation.condition.text}
+                   {/* <i className="small material-icons">wb_sunny</i>
+                   <i className="small material-icons">wb_cloudy</i> */}
+                   , temperature:{current_observation.condition.temperature}</p>
+                   <ul className="collection">
                    {forecasts.map(data=>{
-                     return (<li key={data.date}><Moment unix tz={location.timezone_id}>
+                     return (<li className="collection-item" key={data.date}><Moment unix tz={location.timezone_id}>
                      {data.date}
                       </Moment>, Low:{data.low}, High:{data.high}, {data.text}</li>);
                    })}
-                   
+                   </ul>
                  </div>
         )
       // })
@@ -74,7 +77,7 @@ class PageContainer extends Component{
           <p><a href="#">Link</a></p>
         </div>
         <div className="col-sm-8 text-left"> 
-          <h1>Weather Forcasting</h1>         
+          <h2>Weather Forcasting</h2>         
             <div className="form-group">
               <label htmlFor="sel1">Select City:</label>
               <select className="form-control" id="sel1" onChange={this.handleCityChange}>
