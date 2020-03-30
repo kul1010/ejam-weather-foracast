@@ -2,7 +2,9 @@
 .vscode
 # dependencies
 /node_modules
-/src/config/dev.js
+
+#ignore for git push
+dev.js
 
 # testing
 /coverage
