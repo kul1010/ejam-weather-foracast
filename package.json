@@ -1,12 +1,13 @@
 {
   "name": "ejam-weather-foracast",
   "version": "0.1.0",
-    "engines": {
-      "node": ">=12.16.1", 
-      "npm": ">=6.13.4"
-    },
+  "engines": {
+    "node": ">=12.16.1",
+    "npm": ">=6.13.4"
+  },
   "private": true,
   "dependencies": {
+    "express": "^4.17.1",
     "moment-timezone": "^0.5.28",
     "oauth": "^0.9.15",
     "react": "^16.2.0",
