@@ -25,7 +25,7 @@ class PageContainer extends Component{
     };
     componentDidMount(){
     //  this.props.fetchApiDataAction();
-    console.log('dfdd',this.props)
+    // console.log('dfdd',this.props)
     }
   
   render(){

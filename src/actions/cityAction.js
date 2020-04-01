@@ -2,6 +2,7 @@ import OAuth from 'oauth';
 import {keys} from '../config/keys'
 
 // console.log('oooo',yahooAppId,yahooConsumerKey,yahooConsumerSecret)
+console.log('oooo',keys.yahooAppId,'==')
 const api_header = {
   "X-Yahoo-App-Id": keys.yahooAppId
 };
