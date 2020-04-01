@@ -29,7 +29,7 @@ export const cityAction = (id) => dispatch => {
 export const fetchApiDataAction = (cityId) => async dispatch => {
   // console.log(cityId,'ggg');
    await api_request.get(
-    `https://cors-anywhere.herokuapp.com/https://weather-ydn-yql.media.yahoo.com/forecastrss?location=${cityId}&format=json`,
+    `https://weather-ydn-yql.media.yahoo.com/forecastrss?location=${cityId}&format=json`,
     null,
     null,
      (err, data, result)=> { 
