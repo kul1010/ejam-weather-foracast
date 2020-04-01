@@ -7,7 +7,8 @@ const app = express();
 // app.use(favicon(__dirname + '/build/favicon.ico'));
 // the __dirname is the current directory from where the script is running
 app.use(cors({
-    origin: 'https://shielded-cove-60996.herokuapp.com'
+    origin: ['https://shielded-cove-60996.herokuapp.com','https://weather-ydn-yql.media.yahoo.com/forecastrss'],
+    credentials: true,
   }));
 app.use(express.static(__dirname));
 app.use(express.static(path.join(__dirname, 'build')));
