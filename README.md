@@ -1,7 +1,7 @@
 eJam Weather Report and forcasting using Yahoo API, React - Redux with Bootstrap By Pankaj 10-03-2020
 
 1. download and install the dependenices by running npm install or npm i 
-2. also give Yahoo app id, key and secret also from yahoo weather api
+2. also give Yahoo app id, key and secret also from yahoo weather api in .env for production or create new file in config/dev.js for development
 3. npm run build
 4. npm start or npm run dev
 
