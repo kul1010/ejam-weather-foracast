@@ -5,6 +5,7 @@
 
 #ignore for git push
 dev.js
+.env
 
 # testing
 /coverage
